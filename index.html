@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Adam Beeson</title>
+        <base href="/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <style>
+            /* You can add global styles to this file, and also import other style files */
+            body {
+                background-color: rgb(255, 255, 255);
+                background: url(./assets/bg1.png) bottom left no-repeat fixed;
+                background-size: cover;
+            }
+            a {
+                color: #40838e;
+                text-decoration: none; /* no underline */
+            }
+
+            a:hover {
+                color: #1bc6e3;
+            }
+
+            html,
+            body {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                font-family: Roboto, 'Helvetica Neue', sans-serif;
+            }
+
+            .main {
+                padding: 20px;
+                display: flex;
+                max-width: 980px;
+                margin: auto;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .header {
+                display: flex;
+                flex-direction: row;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+                font-family: Arial, Helvetica, sans-serif;
+                gap: 20px;
+            }
+
+            .header-left {
+                display: flex;
+                flex-direction: row;
+                flex-basis: 20%;
+                min-width: 196px;
+                flex: 4 1 30%;
+                gap: 20px;
+            }
+
+            .header-left-top {
+                font-size: 1.3em;
+                color: #a36b3c;
+            }
+
+            .header-left-bottom {
+                font-weight: 600;
+                font-size: 2.5em;
+                color: #e3771c;
+            }
+
+            .header-mid {
+                flex: 1 1 auto;
+            }
+
+            .header-right {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                flex-basis: 60%;
+                flex-grow: 4;
+                flex-shrink: 3;
+            }
+
+            .header-right-top {
+                font-weight: 700;
+            }
+
+            .hr-styler {
+                color: #40838e;
+                border: 3px solid;
+            }
+
+            .content-main {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap-reverse;
+            }
+
+            .content-left {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                border-right: 1px solid #a36b3c;
+
+                flex: 1 1 auto;
+                justify-content: flex-start;
+            }
+
+            @media screen and (max-width: 700px) {
+                .content-left {
+                    padding-top: 20px;
+                    border-top: 1px solid #a36b3c;
+                    font-family: Arial, Helvetica, sans-serif;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+                    flex-wrap: wrap;
+                    border-right: none;
+                    justify-content: flex-start;
+                }
+            }
+
+            .content-right {
+                flex-basis: 60%;
+                flex-grow: 4;
+                flex-shrink: 3;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .content-left-item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+                flex-grow: 4;
+            }
+
+            .content-left-header {
+                font-weight: 800;
+                color: #a36b3c;
+            }
+
+            .ul-no-decoration {
+                margin-block-start: 0px;
+                margin-block-end: 0px;
+                list-style-type: none;
+                padding-inline-start: 0px;
+            }
+
+            li:not(:last-child) {
+                margin-bottom: 5px;
+            }
+
+            .ul-bullets-only {
+                margin-block-start: 0px;
+                margin-block-end: 0px;
+                padding-inline-start: 20px;
+            }
+
+            .school-content {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .job {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .job-header {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .job-header-top {
+                display: flex;
+                flex-direction: row;
+                gap: 6px;
+                font-size: 0.8em;
+            }
+
+            .job-title {
+                color: #e3751b;
+            }
+
+            .job-description {
+                color: grey;
+            }
+
+            .job-header-mid {
+                flex: 1 1 auto;
+            }
+
+            .job-header-botttom {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .job-title {
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body class="mat-typography">
+        <div class="main">
+            <div class="header">
+                <div class="header-left">
+                    <div class="header-left-picture">
+                        <img src="assets/profile.jpg" alt="Adam Beeson" />
+                    </div>
+                    <div class="header-left-content">
+                        <div class="header-left-top">Principal Engineer</div>
+                        <div class="header-left-bottom">Adam Beeson</div>
+                    </div>
+                </div>
+                <div class="header-mid"></div>
+                <div class="header-right">
+                    <div class="header-right-top">
+                        <hr class="header-right-top-hr hr-styler" />
+                        Objective
+                    </div>
+                    <div class="header-right-bottom">
+                        Seeking an opportunity that leverages my extensive technical expertise and
+                        empowers me to lead cross-functional teams in driving innovative solutions.
+                    </div>
+                </div>
+            </div>
+            <div class="main-hr">
+                <hr class="hr-styler" />
+            </div>
+            <div class="content-main">
+                <div class="content-left">
+                    <!-- Contact Info -->
+                    <div class="content-left-item">
+                        <div class="content-left-header">Contact</div>
+                        <div class="contact-content">
+                            <ul class="ul-no-decoration">
+                                <!-- <li>2350 Tremont Pl #4</li>
+                <li>Denver, CO 80205</li>
+                <li>(719) 214-2446</li> -->
+                                <li>
+                                    <a href="mailto:adam@adambeeson.net">adamadambeeson.net</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.linkedin.com/in/adam-g-beeson/"
+                                        target="_blank"
+                                        >LinkedIn Profile</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- School Info -->
+                    <div class="content-left-item">
+                        <div class="content-left-header">Education</div>
+                        <div class="school-content">
+                            <ul class="ul-no-decoration">
+                                <li>August 2002 - May 2006</li>
+                                <li><strong>B.S. CIS</strong></li>
+                                <li>
+                                    <a href="https://www.csupueblo.edu/index.html" target="_blank"
+                                        >CSU-Pueblo</a
+                                    >
+                                </li>
+                            </ul>
+                            <ul class="ul-no-decoration">
+                                <li>August 2005 - May 2007</li>
+                                <li><strong>B.S. Criminology</strong></li>
+                                <li>
+                                    <a href="https://www.csupueblo.edu/index.html" target="_blank"
+                                        >CSU-Pueblo</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Core Compotencies -->
+                    <div class="content-left-item">
+                        <div class="content-left-header">Core Compotencies</div>
+                        <div class="comp-content">
+                            <ul class="ul-no-decoration">
+                                <li>SDLC</li>
+                                <li>Node/Typescript</li>
+                                <li>.NET/C#</li>
+                                <li>AWS & Cloud Architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Skills -->
+                    <div class="content-left-item">
+                        <div class="content-left-header">Skills</div>
+                        <div class="comp-content">
+                            <ul class="ul-bullets-only">
+                                <li>Team Leadership</li>
+                                <li>Object Oriented Programming</li>
+                                <li>Problem Solving</li>
+                                <li>AWS</li>
+                                <li>CI/CD (Github, Gitlab)</li>
+                                <li>Agile/Scrum</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Interests -->
+                    <div class="content-left-item">
+                        <div class="content-left-header">Interests</div>
+                        <div class="comp-content">
+                            <ul class="ul-no-decoration">
+                                <li>Snowboarding.</li>
+                                <li>Cooking.</li>
+                                <li>Hiking.</li>
+                                <li>Constantly Learning.</li>
+                                <li>
+                                    <a href="https://radiolab.org/" target="_blank"
+                                        >RadioLab Podcasts</a
+                                    >.
+                                </li>
+                                <li>AI & Machine Learning.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <!-- Job Posting -->
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-header-top">
+                                <div class="job-term">December 2023 - Current</div>
+                                <div class="job-header-mid"></div>
+                                <div class="job-description">
+                                    Summary: Delivery Fullfillment, Logistics, and Analytics
+                                </div>
+                            </div>
+                            <div class="job-header-bottom">
+                                <div class="job-title">Principal Engineer</div>
+                                <div class="job-company">
+                                    <em
+                                        ><a href="https://www.onerail.com/about/" target="_blank"
+                                            >OneRail</a
+                                        ></em
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            Providing strategic technical direction and vision for the organization.
+                            Overseeing the planning, execution, and delivery of complex projects and
+                            collaborating with project managers to define project scope, goals, and
+                            deliverables. Promoting effective communication and knowledge sharing
+                            within the engineering teams.
+                        </div>
+                    </div>
+                    <!-- Job Posting -->
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-header-top">
+                                <div class="job-term">May 2019 - December 2023</div>
+                                <div class="job-header-mid"></div>
+                                <div class="job-description">
+                                    Summary: Financial Tech Cloud Native SaaS
+                                </div>
+                            </div>
+                            <div class="job-header-bottom">
+                                <div class="job-title">Software Architect & Team Lead</div>
+                                <div class="job-company">
+                                    <em
+                                        ><a
+                                            href="https://nelnetinc.com/nelnet-story/"
+                                            target="_blank"
+                                            >Nelnet, Inc</a
+                                        ></em
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            Designed and implemented financial technology products, front-end and
+                            back-end, for servicing consumer and government lending. Transformed
+                            complex requirements from customers into highly scalable, reliable, and
+                            easy to use applications for both end user loan borrowers as well as
+                            corporate customers using our products as a service (SaaS).
+                        </div>
+                    </div>
+
+                    <!-- Job Posting -->
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-header-top">
+                                <div class="job-term">April 2015 - May 2019</div>
+                                <div class="job-header-mid"></div>
+                                <div class="job-description">
+                                    Summary: Full-Stack Application Design & Dev
+                                </div>
+                            </div>
+                            <div class="job-header-bottom">
+                                <div class="job-title">Software Engineer</div>
+                                <div class="job-company">
+                                    <em
+                                        ><a
+                                            href="https://nelnetinc.com/nelnet-story/"
+                                            target="_blank"
+                                            >Nelnet, Inc</a
+                                        ></em
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            Full-Stack engineer developing web applications for student borrowers
+                            and service call center agents. Developed end to end applications using
+                            Angular, .NET core WebApi, and SQL databases. From 2018-2019 also served
+                            as team lead for 2 delivery teams.
+                        </div>
+                    </div>
+
+                    <!-- Job Posting -->
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-header-top">
+                                <div class="job-term">August 2014 - April 2015</div>
+                                <div class="job-header-mid"></div>
+                                <div class="job-description">
+                                    Summary: Global Distributed Backend Tech
+                                </div>
+                            </div>
+                            <div class="job-header-bottom">
+                                <div class="job-title">Software Consultant</div>
+                                <div class="job-company">
+                                    <em
+                                        ><a
+                                            href="https://www.compassion.com/about/about-us.htm?referer=630527&utm_source=google&utm_medium=cpc&utm_campaign=SEM_Google_BR_Sponsor_High-Volume_General_Desktop_CI&utm_content=131781083753&utm_term=compassion%20international&gad_source=1&gclid=CjwKCAiAjrarBhAWEiwA2qWdCGJumtTCSrVhPodBRKOrUoKnFcw7VkDYMzRoOG68agz-CSWEa1aNMhoC55EQAvD_BwE"
+                                            target="_blank"
+                                            >Compassion International</a
+                                        ></em
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            Contracted to consult, design, and develop a back-end application that
+                            connected with an IOS application via Wi-Fi or Bluetooth. This product
+                            is used to upload and stream data to mobile devices in remote locations
+                            around the world.
+                        </div>
+                    </div>
+
+                    <!-- Job Posting -->
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-header-top">
+                                <div class="job-term">June 2012 - August 2014</div>
+                                <div class="job-header-mid"></div>
+                                <div class="job-description">
+                                    Summary: US Army Training & Logistic App Dev
+                                </div>
+                            </div>
+                            <div class="job-header-bottom">
+                                <div class="job-title">Sr Software Engineer</div>
+                                <div class="job-company">
+                                    <em
+                                        ><a href="https://vetengineering.com/about/" target="_blank"
+                                            >Veteran's Engineering
+                                        </a></em
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            Full-Stack developer building front end applications and back-end
+                            services for US Army training applications.
+                        </div>
+                    </div>
+
+                    <!-- Job Posting -->
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-header-top">
+                                <div class="job-term">September 2011 - June 2012</div>
+                                <div class="job-header-mid"></div>
+                                <div class="job-description">
+                                    Summary: Medical Tech Full Stack Dev
+                                </div>
+                            </div>
+                            <div class="job-header-bottom">
+                                <div class="job-title">Sr Software Engineer</div>
+                                <div class="job-company">
+                                    <em
+                                        ><a
+                                            href="https://diversushealth.org/about-us/"
+                                            target="_blank"
+                                        >
+                                            AspenPointe Medical Services (Now Divursus Health)</a
+                                        ></em
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            Designed and developed a call center application to serve as a portal
+                            for patients seeking out medical professionals and information.
+                        </div>
+                    </div>
+
+                    <!-- Job Posting -->
+                    <div class="job">
+                        <div class="job-header">
+                            <div class="job-header-top">
+                                <div class="job-term">October 2007 - September 2011</div>
+                                <div class="job-header-mid"></div>
+                                <div class="job-description">
+                                    Summary: USAF & Navy Training & Logistic App Dev
+                                </div>
+                            </div>
+                            <div class="job-header-bottom">
+                                <div class="job-title">Software Engineer</div>
+                                <div class="job-company">
+                                    <em
+                                        ><a
+                                            href="https://www.northropgrumman.com/who-we-are"
+                                            target="_blank"
+                                            >Northrop Grumman</a
+                                        ></em
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            Full-Stack developer working on training software for the USAF and US
+                            Navy, written in C#, VB.NET
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
