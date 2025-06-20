@@ -1,0 +1,51 @@
+.windowMain{
+    position: absolute;
+    background-color:  #fff;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.59);
+    -webkit-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.59);
+    border: 1px solid black;
+}
+
+.windowBannerTop{
+    background-image:url(window_banner_top.png);
+    background-color: #e2e0e0;
+    width: 100%;
+    height: 20px;
+    padding: 0px;
+    margin: auto 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.windowBannerText{
+    background-color: #e2e0e0;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: auto 0;
+    font-family: 'Lucida Sans';
+    font-weight: 700;
+}
+
+.windowCloseBox{
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    border: 1px solid black;
+    background-color: #e2e0e0;
+    width: 11px;
+    height: 11px;
+}
+
+.windowScrollRight{
+    position: absolute;
+    background-color: #e2e0e0;
+    border-left: 1px solid black;
+    width: 20px;
+}
+
+.windowContent{
+    background-color: white;
+    padding-left: 10px;
+    position: absolute;
+}
