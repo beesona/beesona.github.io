@@ -9,7 +9,7 @@ var desktopObjs = [
         y: 50,
         width: 500,
         height: 300,
-        contents: [],
+        contents: []
     },
     {
         id: 'icoDocResume',
@@ -21,20 +21,8 @@ var desktopObjs = [
         y: 50,
         width: 700,
         height: 900,
-        contents: ReturnResume(),
+        contents: ReturnResume()
     },
-    {
-        id: 'icoDocChristmas',
-        name: 'XMAS_2018',
-        src: 'icoDoc.png',
-        type: 'doc',
-        level: 'system',
-        x: 50,
-        y: 50,
-        width: 600,
-        height: 800,
-        contents: ReturnXmas(),
-    },    
     {
         id: 'icoDocBackground',
         name: 'Adams Background',
@@ -45,7 +33,7 @@ var desktopObjs = [
         y: 50,
         width: 600,
         height: 800,
-        contents: ReturnBackground(),
+        contents: ReturnBackground()
     },
     {
         id: 'icoImgSanFran',
@@ -57,8 +45,8 @@ var desktopObjs = [
         y: 50,
         width: 640,
         height: 480,
-        contents: ReturnSanFranImage(),
-    }/*,
+        contents: ReturnSanFranImage()
+    } /*,
     {
         id: 'icoWolf',
         name: 'Wolfenstein 3D',
@@ -82,5 +70,5 @@ var desktopObjs = [
         width: 1000,
         height: 680,
         contents: ReturnBar(),
-    }   */ 
+    }   */
 ];
